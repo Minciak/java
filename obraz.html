@@ -2,9 +2,9 @@
 <html>
 <head>
 <script type="text/javascript">
-function okno_zamknij_nowak()
+function okno_zamknij_rogowska() 
 {
-window.close_nowak()
+window.close()
 }
 </script>
 </head>
@@ -74,9 +74,9 @@ Nosi to nazwę funkcji obsługi zdarzenia (ang. event handler) i pozwala na prac
 JavaScript pozwala korzystać z plików o rozszerzeniu .js zawierających skrypty; można je dołączać do dokumentu HTML, wskazując nazwę pliku w atrybucie src.
 <br>
 <h2>Kod źródłowy zagnieżdżony w HTML-u</h2>
-Kod JavaScript musi być zawarty pomiędzy znacznikami HTML < script > i < /script >:
+Kod JavaScript musi być zawarty pomiędzy znacznikami HTML &lt; script &gt; i < /script >:
 
-<h2>Dlaczego jest to bezpieczne narzędzie</h2>
+<h2> Dlaczego jest to bezpieczne narzędzie </h2>
 Ze względów bezpieczeństwa JavaScript ma znacznie ograniczone uprawnienia dostępu do zasobów komputera, przy użyciu którego przeglądana jest dana strona, a wszelkie odwołania do funkcji i obiektów wykonywane są w trakcie wykonywania programu.
 <h2>Czy JS to język obiektowy</h2>
 JS to język obiektowy, bo program komputerowy wyrażony jest jako zbiór takich obiektów, komunikujących się pomiędzy sobą w celu wykonywania zadań.
@@ -99,7 +99,15 @@ wytłumaczenie:<br>
 window.open - otwarcie nowego okna<br>
 obraz.html - url do strony<br>
 okienko - nazwa strony<br>
-... (Pozostałe wiersze: 12)
-
-
-<img src="obraz1.gif"/><br>
+toolbar - pokazuje lub ukrywa standardowy pasek narzędzi<br>
+directories - pokazuje lub ukrywa przyciski katalogów<br>
+menubar - pokazuje lub ukrywa menu przeglądarki<br>
+height - ustawia wysokość okna<br>
+width - ustawia szerokość okna <br>
+top - ustawia położenie okna względem góry ekranu<br>
+left - ustawia położenie okna względem lewej strony ekranu<br>
+window.close - zamknięcie okna<br>
+<img src="obraz.gif" />
+<input type="button" value="zamknij okno" onclick="okno_zamknij_rogowska()"/>
+</body>
+</html>
