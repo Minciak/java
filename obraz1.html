@@ -1,16 +1,15 @@
 <html>
 <head>
-<title> Zadanie 1 - Nowak </title>
-<script language="JavaScript">
-function WinOpen_nowak()
+<script type="text/javascript">
+function okno_zamknij_nowak()
 {
-window.open("obraz1.jpg","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+window.close()
 }
 </script>
 </head>
 <body>
-<form>
-<input type="button" name="przycisk" value="obraz" onclick="WinOpen_nowak(' ')">
-</form>
+Wiosna
+<img src="obraz1.jpg" width="140" height="140"/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nowak()"/>
 </body>
 </html>
