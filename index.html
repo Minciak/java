@@ -1,27 +1,29 @@
 
-
 <html>
-
 <head>
-<title> strona zaliczeniowa  </title>
-<script language="JavaScript">
-function WinOpen_zad1()
+<title> strona zaliczeniowa </title> 
+<meta charset="UTF-8">
+<script>
+function WinOpen_zadanie1()
 {
-window.open("zadanie1.html");
+window.open("zadanie1.html","okienko");
 }
-function WinOpen_zad2()
+function WinOpen_zadanie2()
 {
 window.open("zadanie2.html","okienko","toolbar=no,directories=no,menubar=no,height=200,width=700,top=300,left=10");
 }
 </script>
 </head>
-
 <body>
-    <p style="background-color: rgb(195, 252, 255); font: 3cm Arial; text-align: right"> Nowak </p>
-<form>
-<input type="button" name="przycisk" value="zadanie1" onclick="WinOpen_zad1(' ')">
-<input type="button" name="przycisk" value="zadanie2" onclick="WinOpen_zad2(' ')">
-</form>
-
-</body>
-</html>
+<p align="center" style="font-size: 2cm; background-color: lavender;">Nowak</p>
+<form style="text-align: center;">
+<table color="black">
+ <tr>  
+   <td style="text-align: center;">
+     <br>
+     <input type="button" name="przycisk" value="Zadanie 1" onclick="WinOpen_zadanie1()">
+     <input type="button" name="przycisk" value="Zadanie 2" onclick="WinOpen_zadanie2()">
+     <br>
+   </td>
+ </tr>
+</table>
