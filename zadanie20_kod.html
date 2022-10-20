@@ -1,0 +1,80 @@
+
+<now>
+    <head>
+    
+    </head>
+    
+    <body>
+    
+    <textarea name="nazwa" cols="500" rows="60" disabled>
+      
+<html>
+<head>
+<title>Zadanie 20</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function pole_nowak(a_now,b_now,h_now)
+{
+ a_now=parseFloat(a_now);
+ b_now=parseFloat(b_now);
+ h_now=parseFloat(h_now);
+ pole_wynik_now=(a_now+b_now)*h_now/2;
+ document.getElementsByName('pole')[0].value=pole_wynik_now.toFixed(2);
+ alert("Pc="+pole_wynik_now.toFixed(2)+" cm^2");
+ wprowadz_pole_now.innerHTML="Pc="+pole_wynik_now.toFixed(2)+" cm^2"+"<br>";
+}
+function obwod_now(a_now,b_now,h_now)
+{
+ a_now=parseFloat(a_now);
+ b_now=parseFloat(b_now);
+ h_now=parseFloat(h_now);
+ x_now=Math.abs(a_now-b_now)/2;
+ c_now=Math.sqrt(x_now*x_now+h_now*h_now);
+ d_now=c_now;
+ obwod_now=a_now+b_now+c_now+d_now;
+ document.getElementsByName('obw')[0].value=obwod_now.toFixed(2);
+ alert("Obwod="+obwod_now.toFixed(2)+" cm");
+ wprowadz_obw_now.innerHTML="Obwód="+obwod_now.toFixed(2)+" cm";
+}
+function okno_zamknij_nowak_kod()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie pola oraz obwodu trapezu równoramiennego
+<br>
+<br>
+<form name="formularz" action="..." onsubmit="pole_nowak(this.a_dana_now.value,this.b_dana_now.value,this.h_dana_now.value);
+obwod_now(this.a_dana_now.value,this.b_dana_now.value,this.h_dana_now.value);return false">
+Podaj a=
+<input size="6" name="a_dana_now">
+Podaj b=
+<input size="6" name="b_dana_now">
+Podaj h=
+<input size="6" name="h_dana_now">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Pole=
+<input size="6" name="pole">
+Obwód=
+<input size="6" name="obw">
+</form>
+<table>
+<tr id="wprowadz_pole_now"></tr>
+<tr id="wprowadz_obw_now"></tr>
+<br/>
+<br/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nowak_kod()"/>
+</table>
+</body>
+</html>
+
+</textarea>
+
+</body>
+</now>

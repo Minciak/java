@@ -1,0 +1,72 @@
+
+<now>
+    <head>
+    
+    </head>
+    
+    <body>
+    
+    <textarea name="nazwa" cols="500" rows="60" disabled>
+<html>
+<head>
+<title>Zadanie 21</title>
+<meta charset="UTF-8">
+<script language="JavaScript">
+function dlugosc_now(d_now,x_now)
+{
+ d_now=parseFloat(d_now);
+ x_now=parseFloat(x_now);
+ drabina_now=Math.sqrt(d_now*d_now+x_now*x_now);
+ document.getElementsByName('drab')[0].value=drabina_now.toFixed(2);
+ alert("Drabina="+drabina_now.toFixed(2)+" m");
+ drabina.innerHTML="Drabina="+drabina_now.toFixed(2)+" m"+"<br>";
+}
+function alfa_now(d_now,x_now)
+{
+ d_now=parseFloat(d_now);
+ x_now=parseFloat(x_now);
+ radian_now=Math.atan2(d_now,x_now);
+ stopnie_now=radian_now*(180/Math.PI);
+ document.getElementsByName('kat')[0].value=stopnie_now.toFixed(2);
+ alert("Alfa="+stopnie_now.toFixed(2)+" stopni");
+ alfa.innerHTML="Alfa="+stopnie_now.toFixed(2)+" stopni";
+}
+function okno_zamknij_nowak_kod()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+Obliczanie drabiny
+<br>
+<br>
+<form name="formularz" action="..." onsubmit="dlugosc_now(this.d_dana_now.value,this.x_dana_now.value);
+alfa_now(this.d_dana_now.value,this.x_dana_now.value);return false">
+Podaj d=
+<input size="6" name="d_dana_now">
+Podaj x=
+<input size="6" name="x_dana_now">
+<br>
+<br>
+<input type="submit" Value="oblicz" >
+<br>
+<br>
+Drabina=
+<input size="6" name="drab">
+Alfa=
+<input size="6" name="kat">
+</form>
+<table>
+<tr id="drabina"></tr>
+<tr id="alfa"></tr>
+<br/>
+<br/>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_nowak_kod()"/>
+</table>
+</body>
+</html>
+</textarea>
+
+</body>
+</now>

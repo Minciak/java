@@ -1,0 +1,76 @@
+
+<now>
+    <head>
+    
+    </head>
+    
+    <body>
+    
+    <textarea name="nazwa" cols="500" rows="60" disabled>
+<html>
+    <head>
+    <title>Zadanie 22</title>
+    <meta charset="UTF-8">
+    <script language="JavaScript">
+    function dlugosc(a_now,c_now)
+    {
+     a_now=parseFloat(a_now);
+     c_now=parseFloat(c_now);
+     b_now=Math.sqrt(c_now*c_now-a_now*a_now);
+     h_now=b_now;
+    
+     document.getElementsByName('wys')[0].value=h_now.toFixed(2);
+     alert("Wysokość (h)="+h_now.toFixed(2)+" m");
+     wysokosc.innerHTML="Wysokość (h)="+h_now.toFixed(2)+" m"+"<br>";
+    }
+    function obwod_now(a_now,c_now)
+    {
+     a_now=parseFloat(a_now);
+     c_now=parseFloat(c_now);
+     b_now=Math.sqrt(c_now*c_now-a_now*a_now);
+     radian_now=Math.atan2(a_now,b_now);
+     stopnie_now=radian_now*(180/Math.PI);
+     document.getElementsByName('kat')[0].value=stopnie_now.toFixed(2);
+     alert("Kąt="+stopnie_now.toFixed(2)+" stopni");
+     kat_stopnie.innerHTML="Alfa="+stopnie_now.toFixed(2)+" stopni";
+    }
+    function okno_zamknij_nowak_kod()
+    {
+    window.close()
+    }
+    </script>
+    </head>
+    <body>
+    Obliczanie drabiny 
+    <br>
+    <br>
+    <form name="formularz" action="..." onsubmit="dlugosc(this.odl_dana_now.value,this.s_dana_now.value);
+    obwod_now(this.odl_dana_now.value,this.s_dana_now.value);return false">
+    Podaj odległość=
+    <input size="6" name="odl_dana_now">
+    Podaj ile przeleciał samolot=
+    <input size="6" name="s_dana_now">
+    <br>
+    <br>
+    <input type="submit" Value="oblicz" >
+    <br>
+    <br>
+    Wysokość (h)=
+    <input size="6" name="wys">
+    Kąt=
+    <input size="6" name="kat">
+    </form>
+    <table>
+    <tr id="wysokosc"></tr>
+    <tr id="kat_stopnie"></tr>
+    <br/>
+    <br/>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_nowak_kod()"/>
+    </table>
+    </body>
+    </html>
+
+</textarea>
+
+</body>
+</now>

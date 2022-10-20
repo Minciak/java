@@ -1,0 +1,64 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+<textarea name="nazwa" cols="500" rows="60" disabled>
+
+<html> 
+<head> 
+<title>
+ Przykład obliczenia Obw i Pc prostokata
+</title>
+ <script language="JavaScript">
+function pc_now(a_now,b_now)
+{
+ a_now_liczba=parseFloat(a_now)
+ b_now_liczba=parseFloat(b_now)
+ pc_now_wynik=a_now*b_now
+ document.getElementsByName('obj')[0].value=pc_now_wynik.toFixed(2); /* na dokument */
+ alert("Pc="+pc_now_wynik.toFixed(2)+" cm^2"); /*do okna Alert */
+ pokaz1.innerHTML="Pc="+pc_now_wynik.toFixed(2)+" cm^2"+"<br>"; /* do tabeli */
+}
+function obw_now(a_now,b_now)
+{
+ a_now_liczba=parseFloat(a_now)
+ b_now_liczba=parseFloat(b_now)
+19
+obw_now_wynik=2*a_now+2*b_now
+ document.getElementsByName('pole')[0].value=obw_now_wynik.toFixed(2);
+ alert("Obw="+obw_now_wynik.toFixed(2)+" cm");
+ pokaz2.innerHTML="Obw="+obw_now_wynik.toFixed(2)+"cm";
+}
+ </script>
+</head> 
+<body> 
+Obliczanie Obw i Pc prostokata
+<br> <br>
+<form name="formularz" action="..." onsubmit="pc_now(this.boka_now.value,this.bokb_now.value); 
+obw_now(this.boka_now.value,this.bokb_now.value);return false"> 
+ Podaj a=
+ <input size="6" name="boka_now">
+ Podaj b=
+ <input size="6" name="bokb_now">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+Pc=
+ <input size="6" name="obj">
+Obw=
+ <input size="6" name="pole">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>
+
+</textarea>
+
+</body>
+</html>
