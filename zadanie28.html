@@ -1,0 +1,37 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function pud(wielkosc_n,kolor_n,poczym_n)//początek konstruktora
+{
+this.wielkosc=wielkosc_n;
+this.kolor=kolor_n;
+this.poczym=poczym_n;
+}//koniec konstruktora
+
+pud.prototype.wypisz = function () //definicja metody
+{
+alert(this.wielkosc + ' ' + this.kolor+ ' ' + this.poczym);
+};
+
+var pude1 = new pud("male", "brazowe", "po butach"); // nowy obiekt tele1
+var pude2 = new pud("duze", "czarne", "po stole");
+pude1.wypisz(); // uruchomienie metody wypisz() dotyczącej tele 1
+pude2.wypisz();
+document.write("dostęp do właściwości"+"<br>");
+// poniżej dostęp do pól tele1
+document.write("pierwsze pudelko"+" "+pude1.kolor+" "+pude1.marka+" "+pude1.wielkosc+"<br>");
+document.write("drugie pudelko"+" "+pude2.kolor+" "+pude2.marka+" "+pude2.wielkosc+"<br>");
+pude1.wysokosc="50";
+pude2.wysokosc="20";
+pud.pudelko_pokaz_nowak2=function() {alert("wysokosc: " + pude1.wysokosc + "cm")}
+pud.pudelko_pokaz_nowak2();
+pud.pudelko_pokaz_nowak3=function() {alert("wysokosc: " + pude2.wysokosc + "cm")}
+pud.pudelko_pokaz_nowak3();
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe 
+</body>
+</html>
